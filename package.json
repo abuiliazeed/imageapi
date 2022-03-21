@@ -8,8 +8,8 @@
     "test": "npx tsc && jasmine",
     "dev": "nodemon ./src/index.ts",
     "clean": "rimraf build/",
-    "build": "npx tsc",
-    "start": "npm run build && nodemon build/index.js",
+    "build": "tsc",
+    "start": "node build/index.js",
     "deploy": "git add . && git commit -m Heroku && git push heroku master",
     "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx}'",
     "lint": "eslint . --ext .ts"
