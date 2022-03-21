@@ -1,6 +1,8 @@
 # Dependency directories
 node_modules/
 
+# Build Directories since it's redundancy and could be build when deployed
+build/
 # Optional npm cache directory
 .npm
 
