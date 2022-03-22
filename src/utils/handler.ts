@@ -30,4 +30,4 @@ const dirCreator = (dirPath: string): void => {
 }
 
 //we need to export the functions we created in order to be able to use them in our project
-export default { imageResizer, typeChecker, fileChecker, dirCreator }
+export { imageResizer, typeChecker, fileChecker, dirCreator }
