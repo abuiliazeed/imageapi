@@ -8,3 +8,6 @@ build/
 
 # dotenv environment variables file
 .env
+
+# Instructions
+instructions.md 
