@@ -1,5 +1,6 @@
 import express from 'express'
 import routes from './routes'
+import simplelogger from './middleware/simplelogger'
 import * as dotenv from 'dotenv'
 
 dotenv.config()
@@ -11,7 +12,7 @@ const app = express()
 const PORT = process.env.PORT || 3000
 
 //using the index routes url mapper we created for routing
-app.use('/', routes)
+app.use('/', simplelogger, routes)
 
 // start express server
 app.listen(PORT, () => {

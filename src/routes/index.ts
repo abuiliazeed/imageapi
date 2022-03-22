@@ -3,12 +3,12 @@ import resize from './api/resize'
 
 const routes = express.Router()
 
+routes.use('/resize', resize)
+
 routes.get('/', (req: express.Request, res: express.Response) => {
   res.json({
-    message: 'Image resize API is waiting for your query'
+    message: 'to access the endpoint navigate to /resize'
   })
 })
-
-routes.use('/resize', resize)
 
 export default routes
