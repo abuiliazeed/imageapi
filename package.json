@@ -7,7 +7,6 @@
     "postinstall": "tsc",
     "test": "npx tsc && jasmine",
     "dev": "nodemon ./src/index.ts",
-    "clean": "rimraf build/",
     "build": "tsc",
     "start": "node build/index.js",
     "deploy": "git add . && git commit -m Heroku && git push heroku master",
@@ -19,7 +18,7 @@
     "url": "git+https://github.com/abuiliazeed/imageapi.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Abuiliazeed",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/abuiliazeed/imageapi/issues"
@@ -30,7 +29,6 @@
     "express": "^4.17.3",
     "jasmine": "^3.99.0",
     "jasmine-spec-reporter": "^7.0.0",
-    "morgan": "^1.10.0",
     "sharp": "^0.30.3",
     "supertest": "^6.2.2"
   },
@@ -48,7 +46,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "nodemon": "^2.0.15",
     "prettier": "^2.6.0",
-    "rimraf": "^3.0.2",
     "ts-node": "^10.7.0",
     "typescript": "^4.6.2"
   }
