@@ -1,11 +1,10 @@
 import supertest from 'supertest'
-import app from '../index'
+import app from '../../index'
 
-// create a request object
 const request = supertest(app)
 
-describe('Test endpoint response', () => {
-  it('test hello world endpoint', async () => {
+describe('testing the resize image API response', () => {
+  it('testing the response of the resize API', async () => {
     const response = await request.get('/')
     expect(response.status).toBe(200)
   })
