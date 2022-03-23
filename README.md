@@ -1,4 +1,4 @@
-# Image Resize Web App
+# Image Resize API
 this image Resizing API will help you resize any image using Nodejs sharp package.
 
 # Tech stack and dependency
