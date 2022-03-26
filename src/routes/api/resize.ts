@@ -13,23 +13,35 @@ resize.get('/', async (req: express.Request, res: express.Response) => {
   if (Object.keys(req.query).length === 0) {
     return res
       .status(200)
-      .send(
+      .json(
         'to use the image resizer API construct your query as follows  filename (images available: cat, dog, duck),width,height for example ?filename=cat&width=100&height=100'
       )
   }
-
-  if (!filename || !width || !height || isNaN(Number(height))) {
+//file
+  if (!filename) {
     return res
       .status(400)
-      .send('error missing parameters please follow the API documentations in /')
+      .json('Error: wrong filename please follow the API documentations in /')
+  }
+//width
+  if (!width) {
+    return res
+      .status(400)
+      .json('Error: wrong width please follow the API documentations in /')
+  }
+  //height
+  if (!height || isNaN(Number(height))) {
+    return res
+      .status(400)
+      .json('Error: wrong height please follow the API documentations in /')
   }
 
   if (typeChecker(String(filename))) {
-    return res.status(400).send('remove the extension from the filename')
+    return res.status(400).json('remove the extension from the filename')
   }
 
   if (!fileChecker(targetImage)) {
-    return res.status(404).send('image not found please choose availble image stated in /')
+    return res.status(404).json('image not found please choose availble image stated in /')
   }
 
   if (!fileChecker(outputDirectory)) {
