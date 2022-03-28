@@ -5,7 +5,8 @@ const routes = express.Router()
 
 routes.use('/resize', resize)
 
-routes.get('/', (req: express.Request, res: express.Response) => {
+//Udacity Review: Notice that i added a return type
+routes.get('/', (req: express.Request, res: express.Response): void | Response => {
   res.json({
     message: 'to access the endpoint navigate to /resize'
   })
